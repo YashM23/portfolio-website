@@ -196,8 +196,8 @@ const Skills = () => {
 
   return (
     <div className="skills h-full flex flex-col justify-between items-center bg-black py-10">
-      <div className=" font-bold text-white w-full pt-20">
-        <h2 className="text-4xl font-bold text-orange-400 text-center">
+      <div className=" font-bold text-white w-full pt-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-orange-400 text-center">
           Skills
         </h2>
 

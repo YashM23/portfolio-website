@@ -61,7 +61,7 @@ const Contact = () => {
             </h2>
           </div>
 
-          <div
+          {/* <div
             className="flex flex-col items-center "
             onClick={() => {
               window.open("");
@@ -74,7 +74,7 @@ const Contact = () => {
             <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               Indeed
             </h2>
-          </div>
+          </div> */}
         </div>
       </div>
 

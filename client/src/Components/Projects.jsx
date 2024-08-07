@@ -66,27 +66,29 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects h-full flex flex-col items-center pt-20 bg-black ">
-      <div className="text-4xl font-bold text-orange-400 pt-10">Projects</div>
+    <div className="projects h-full flex flex-col items-center pt-16 bg-black ">
+      <div className="text-3xl sm:text-4xl font-bold text-orange-400 pt-10">
+        Projects
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 text-center mt-4 py-10 px-10 sm:px-32 md:px-12 lg:px-20">
         {ProjectList.map((project, index) => (
           <>
             <div
-              key={project.id}
+              key={index}
               className="bg-neutral-200/10 flex-col md:flex-row rounded-2xl max-w-xl"
             >
               <div className="h-60 relative overflow-hidden rounded-t-xl">
                 <img
                   src={project.img}
                   alt=""
-                  className="hover:scale-110 duration-200 object-cover h-full w-full"
+                  className="scale-110 hover:scale-100 object-cover hover:object-contain duration-200 h-full w-full"
                 />
                 <h2
                   onClick={() => {
                     showProjectDetails(project.id);
                   }}
-                  className=" absolute w-full bottom-0 text-left font-bold cursor-pointer p-4 text-white bg-gradient-to-t from-black/90 to-transparent  text-xl sm:text-2xl md:text-xl lg:text-2xl "
+                  className=" absolute w-full bottom-0 text-left font-bold cursor-pointer hover:underline hover:underline-offset-8 p-4 text-white bg-gradient-to-t from-black/70 to-transparent text-xl sm:text-2xl md:text-xl lg:text-2xl "
                 >
                   {project.title}
                 </h2>
@@ -103,7 +105,7 @@ const Projects = () => {
                   Technologies Used :
                 </p>
 
-                <div className="mb-2 flex items-center justify-start p-4 gap-2 w-[260px] sm:w-[390px] overflow-x-auto no-scrollbar">
+                <div className="mb-2 flex items-center justify-start p-4 gap-2 w-[260px] sm:w-[320px] overflow-x-auto no-scrollbar">
                   {project.techstack.map((tech, index) => (
                     <>
                       <p
@@ -118,25 +120,28 @@ const Projects = () => {
               </div>
 
               <div className="p-4 w-full border-t-2 border-neutral-600 flex justify-end">
-                <button
-                  className="text-neutral-500 hover:text-orange-500 duration-300 font-bold mr-4"
-                  onClick={() => {
-                    showProjectDetails(project.id);
-                  }}
-                >
-                  More
-                </button>
+                {/* GITHUB BUTTON */}
                 <button
                   onClick={() => {
                     window.open(project.link);
                   }}
-                  className="text-neutral-500 hover:text-orange-500 duration-300 font-bold flex items-center text-sm md:text-base"
+                  className="text-neutral-500 hover:text-orange-500 hover:underline hover:underline-offset-4 duration-300 font-bold flex items-center text-sm md:text-base mr-6"
                 >
-                  Open Github{" "}
+                  Open in Github{" "}
                   <span className="ml-2">
                     {" "}
                     <FaGithub size={30} className="" />
                   </span>
+                </button>
+
+                {/* SHOW MORE BUTTON */}
+                <button
+                  className="text-neutral-500 hover:text-orange-500 hover:underline hover:underline-offset-4 duration-300 font-bold "
+                  onClick={() => {
+                    showProjectDetails(project.id);
+                  }}
+                >
+                  Show More
                 </button>
               </div>
             </div>
@@ -159,7 +164,7 @@ const ProjectsModal = ({ modalData, modal, setModal }) => {
   return (
     <>
       <div className="fixed inset-0 bg-neutral-900/5 backdrop-blur-sm flex justify-center items-center z-50">
-        <div className="relative bg-neutral-900 max-w-[290px] sm:max-w-4xl flex flex-col justify-center items-start sm:flex-row sm:justify-center sm:items-center rounded-2xl overflow-hidden">
+        <div className="relative bg-neutral-900 max-w-[300px] sm:max-w-2xl flex flex-col justify-center items-start sm:flex-row sm:justify-center sm:items-center rounded-2xl overflow-hidden">
           {/* TOGGLE MODAL */}
           <div
             onClick={() => {
@@ -175,22 +180,23 @@ const ProjectsModal = ({ modalData, modal, setModal }) => {
             <div className="">
               <img
                 src={modalData.img}
-                className=" object-contain h-full w-full"
+                height={100}
+                width={100}
+                className="object-cover h-full w-full"
               />
             </div>
           </div>
 
           {/* Description SECTION */}
-
-          <div className="w-2/3 h-full py-4 sm:px-10 flex flex-col ml-5 sm:ml-6">
+          <div className="w-2/3 h-full py-4 sm:py-10 sm:px-10 flex flex-col ml-5 sm:ml-0 sm:bg-white/5">
             <div className="text-left md:mt-10">
-              <h2 className=" text-lg sm:text-2xl md:text-2xl font-bold text-neutral-200">
+              <h2 className=" text-lg sm:text-2xl md:text-2xl font-bold text-neutral-200 w-64 sm:w-96 text-wrap">
                 {modalData.title}
               </h2>
             </div>
 
             <div className="text-left my-4 pr-2 w-full">
-              <p className="font-normal font-regular text-[12px] h-32 w-64 line-clamp-4 overflow-y-scroll no-scrollbar sm:text-sm text-neutral-500">
+              <p className="font-normal font-regular  h-32 w-64 line-clamp-4 overflow-y-scroll no-scrollbar text-[12px] sm:text-[14px] text-neutral-500">
                 {modalData.details}
               </p>
             </div>

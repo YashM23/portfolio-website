@@ -13,7 +13,7 @@ function Home() {
       {/* Page 1 */}
       <div className="home h-screen w-full bg-black">
         <div className="w-full flex items-center justify-center h-full">
-          <div className="w-full md:w-1/2 flex flex-col items-start justify-center md:text-left h-full ml-6 sm:ml-10 md:ml-20 lg:ml-32">
+          <div className="w-full md:w-1/2 flex flex-col items-start justify-center md:text-left h-full ml-6 sm:ml-10 md:ml-12 lg:ml-32">
             <div className="w-full">
               <h2 className="text-3xl md:text-4xl text-neutral-300 font-thin">
                 Hi,I'm{" "}
@@ -28,13 +28,13 @@ function Home() {
               <br />
 
               <div className="">
-                <p className="text-sm md:text-base font-regular text-left text-neutral-500 text-wrap w-[300px] sm:w-[450px] md:w-[400px]">
+                <p className="text-sm md:text-base font-regular text-left text-neutral-500 text-wrap w-[300px] sm:w-[450px] md:w-[350px]  line-clamp-3 hover:line-clamp-none transition-transform duration-200">
                   I'm a{" "}
                   <span className="text-lg bg-clip-text text-transparent duration-300 font-extrabold bg-orange-500 ">
                     Full Stack Web Developer
                   </span>
-                  .<br />I have 3 to 4 Years of Experience in Web Development
-                  and also good amount of knowledge of the Web Technologies.
+                  .<br /> I embody passion, reliability, and innovation. 
+                  My commitment to delivering exceptional code, exceeding project goals fuels mutual growth and remarkable achievements.
                 </p>
               </div>
             </div>

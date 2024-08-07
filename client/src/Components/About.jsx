@@ -2,21 +2,21 @@ import React from "react";
 
 const Education = [
   {
-    id: 0,
+    id: "asdflasdlflas",
     year: "2024",
     course: "B.E./B.Tech",
     clgname: "St. Francis Institute Of Technology,Borivali(W)",
     marks: "7.5 CGPA",
   },
   {
-    id: 1,
+    id: "asdflasdlflasasfjadf",
     year: "2020",
     course: "XII",
     clgname: "J.H. Poddar Junior College Of Science & Commerce,Bhayandar(W)",
     marks: "73%",
   },
   {
-    id: 2,
+    id: "sdLJHFsdfnfljs",
     year: "2018",
     course: "X",
     clgname: "Our Lady Of Nazareth High School,Bhayandar(W)",
@@ -39,14 +39,14 @@ const About = () => {
   return (
     <div className="about h-full w-full bg-black py-10 ">
       <div className="pt-16">
-        <h2 className="text-4xl font-bold text-orange-400 text-center p-4">
+        <h2 className="text-3xl sm:text-4xl font-bold text-orange-400 text-center p-4">
           About Me
         </h2>
       </div>
 
       <div className="md:p-2 flex flex-col justify-center items-center mt-4">
         <div className="">
-          <h2 className="text-lg md:text-xl text-center font-regular text-neutral-200 p-4">
+          <h2 className="text-sm sm:text-lg md:text-xl text-center font-regular text-neutral-200 p-4">
             This Table will tell you the information about my{" "}
             <span className="bg-orange-600 text-transparent bg-clip-text font-extrabold">
               Educational Background
@@ -99,7 +99,7 @@ const About = () => {
         <div className="w-[350px] sm:w-[600px] md:w-[800px] flex justify-start items-center gap-2 p-2 overflow-scroll no-scrollbar">
           {Hobbies.map(({ id, name }) => (
             <div className="border-2 border-neutral-600 rounded-full hover:bg-orange-600/60 duration-500 text-center">
-              <p className="text-white p-4 text-nowrap" key={id}>
+              <p className="text-white p-4 text-nowrap text-xs sm:text-base" key={id}>
                 {name}
               </p>
             </div>

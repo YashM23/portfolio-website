@@ -10,7 +10,7 @@ const ProjectList = [
     id: 0,
     title: "Real Estate Recommendation System",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veniam nostrum optio iure, corporis aut libero cumque aliquid corrupti eius blanditiis aliquam dignissimos eos dicta quas ipsa dolorem ipsam! Veritatis dolorem molestiae placeat. Accusamus.",
+      "Guiding as Web Developer to define Full Stack Web Development scope, objectives, and KPIs, ensuring seamless collaboration between tech and business teams. Dual role as Machine Learning Developer, driving algorithm selection, implementation, and continuous optimization for accurate personalized recommendations. ",
     img: realestate,
     techstack: ["NextJS", "TailwindCSS", "MongoDB", "Python"],
     link: "https://github.com/YashM23/Real-Estate-Recommendation-System",
@@ -19,7 +19,7 @@ const ProjectList = [
     id: 1,
     title: "Weather Forecast App",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veniam nostrum optio iure, corporis aut libero cumque aliquid corrupti eius blanditiis aliquam dignissimos eos dicta quas ipsa dolorem ipsam! Veritatis dolorem molestiae placeat. Accusamus.",
+      "Designed and developed a dynamic weather application, leveraging ReactJS to provide users with real-time weather updates and forecast. Implemented real-time data integration from reliable weather APIs, offering users up-to-date weather information.",
     img: Weather,
     techstack: ["ReactJS", "TailwindCSS", "Axios"],
     link: "https://github.com/YashM23/Weather-App-ReactJS",
@@ -28,7 +28,7 @@ const ProjectList = [
     id: 2,
     title: "Random Quotes Generator",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veniam nostrum optio iure, corporis aut libero cumque aliquid corrupti eius blanditiis aliquam dignissimos eos dicta quas ipsa dolorem ipsam! Veritatis dolorem molestiae placeat. Accusamus.",
+      "Conceptualized, designed, and developed a dynamic web application using ReactJS that generates inspirational quotes through API integration. This project showcases my proficiency in front-end development, API utilization, and user experience enhancement.",
     img: Quotes,
     techstack: ["ReactJS", "TailwindCSS", "Axios"],
     link: "https://github.com/YashM23/Random-Quotes-Generator-ReactJS",
@@ -37,7 +37,7 @@ const ProjectList = [
     id: 3,
     title: "Employee Management System",
     details:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veniam nostrum optio iure, corporis aut libero cumque aliquid corrupti eius blanditiis aliquam dignissimos eos dicta quas ipsa dolorem ipsam! Veritatis dolorem molestiae placeat. Accusamus.",
+      "Developed a full-stack application for managing employee records with functionalities to add, delete, and edit employee details.Implemented a responsive frontend with React.js, a robust backend with Node.js and Express.js, and a scalable database using MongoDB. ",
     img: EMSApp,
     techstack: [
       "MongoDB",

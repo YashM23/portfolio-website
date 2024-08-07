@@ -172,35 +172,18 @@ const skills_Icon = [
 
 const Skills = () => {
   const [modal, setModal] = useState(false);
-  const [modaldescription, setModalDescription] = useState("");
-  const [modalSkill, setModalSkill] = useState("");
-  const [modalIcon, setModalIcon] = useState(<></>);
-  const [modalAmount, setModalAmount] = useState("");
+  const [modalData, setModalData] = useState();
 
-  const showDesc = (id) => {
+  const showModal = (id) => {
     setModal(!modal);
-    // console.log(id);
 
-    //SETTING THE DESCRIPTION IN MODAL
-    const desc = skills_Icon.find((d) => d.id === id);
-    setModalDescription(desc.description);
-
-    //SETTING THE SKILL IN MODAL
-    const skill = skills_Icon.find((s) => s.id === id);
-    setModalSkill(skill.skill);
-
-    //SETTING THE ICON IN MODAL
-    const icon = skills_Icon.find((i) => i.id === id);
-    setModalIcon(icon.icon);
-
-    //SETTING THE ICON IN MODAL
-    const amount = skills_Icon.find((amt) => amt.id === id);
-    setModalAmount(amount.amount);
+    const data = skills_Icon.find((skill) => skill.id === id);
+    setModalData(data);
   };
 
   return (
     <div className="skills h-full flex flex-col justify-between items-center bg-black py-10">
-      <div className=" font-bold text-white w-full pt-10">
+      <div className=" font-bold text-white w-full pt-20">
         <h2 className="text-4xl font-bold text-orange-400 text-center">
           Skills
         </h2>
@@ -217,81 +200,91 @@ const Skills = () => {
               {skills_Icon.map(
                 ({ id, skill, amount, icon, logocolor, amountcolor, desc }) => (
                   <>
-                    {!modal ? (
-                      <div
-                        key={id}
-                        onClick={() => {
-                          showDesc(id);
-                        }}
-                        className="border-2 border-neutral-600 hover:bg-neutral-800 duration-500 flex items-center cursor-pointer p-3 rounded-xl"
-                      >
-                        <div className=" flex justify-center items-center">
-                          {/* <IoLogoHtml5 className="text-5xl text-center" /> */}
-                          {icon}
-                        </div>
-
-                        <div className="w-28 md:w-36 border-l-2 border-neutral-500 ml-4">
-                          <p className="text-right font-regular font-bold text-sm md:text-xl text-neutral-400">
-                            {skill} <br />{" "}
-                            <span
-                              className={` font-signature text-transparent bg-clip-text font-bold ${amountcolor}`}
-                            >
-                              {amount}
-                            </span>
-                          </p>
-                        </div>
+                    <div
+                      key={id}
+                      onClick={() => {
+                        showModal(id);
+                      }}
+                      className="border-2 border-neutral-600 hover:bg-neutral-800 duration-500 flex items-center cursor-pointer p-3 rounded-xl"
+                    >
+                      <div className=" flex justify-center items-center">
+                        {/* <IoLogoHtml5 className="text-5xl text-center" /> */}
+                        {icon}
                       </div>
-                    ) : (
-                      <>
-                        <div className="fixed inset-0 flex justify-center items-center bg-black z-50">
-                          <div className="relative bg-neutral-900 max-w-xs md:max-w-2xl flex flex-col md:flex-row justify-center items-center rounded-2xl">
-                            <div
-                              onClick={() => {
-                                setModal(!modal);
-                              }}
-                              className="text-red-500 hover:text-red-900 duration-500 text-3xl p-4 absolute right-0 top-0"
-                            >
-                              <IoIosRemoveCircleOutline />
-                            </div>
-                            <div className="w-1/3">
-                              <div className="flex justify-center items-center p-4 ">
-                                <p className="">{modalIcon}</p>
-                              </div>
-                            </div>
 
-                            <div className="w-2/3 py-4 md:px-4 flex flex-col justify-center">
-                              <div className="text-left md:mt-10">
-                                <h2 className="text-xl md:text-2xl text-neutral-200">
-                                  {modalSkill}
-                                </h2>
-                              </div>
-
-                              <div className="text-left my-4">
-                                <p className="font-normal font-regular text-xs md:text-base text-neutral-500">
-                                  {modaldescription}
-                                </p>
-                              </div>
-
-                              <div className="py-2">
-                                <p className="font-signature text-right text-md md:text-xl text-neutral-400">
-                                  <span className="text-neutral-00">
-                                    {modalAmount}
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    )}
+                      <div className="w-28 md:w-36 border-l-2 border-neutral-500 ml-4">
+                        <p className="text-right font-regular font-bold text-sm md:text-xl text-neutral-400">
+                          {skill} <br />{" "}
+                          <span
+                            className={` font-signature text-transparent bg-clip-text font-bold ${amountcolor}`}
+                          >
+                            {amount}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
                   </>
                 )
+              )}
+              {modal && (
+                <>
+                  <SkillsModal
+                    modalData={modalData}
+                    modal={modal}
+                    setModal={setModal}
+                  />
+                </>
               )}
             </div>
           </div>
         </div>
       </div>
     </div>
+  );
+};
+
+const SkillsModal = ({ modalData, modal, setModal }) => {
+  // console.log(data);
+  return (
+    <>
+      <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50">
+        <div className="relative bg-black max-w-xs md:max-w-2xl flex justify-center items-center rounded-2xl">
+          <div
+            onClick={() => {
+              setModal(!modal);
+            }}
+            className="text-red-500 hover:text-red-900 duration-500 text-3xl p-4 absolute right-0 top-0"
+          >
+            <IoIosRemoveCircleOutline />
+          </div>
+          <div className="w-1/3 flex justify-center items-center ">
+            <div className="flex justify-center items-center p-4 ">
+              <p className="">{modalData.icon}</p>
+            </div>
+          </div>
+
+          <div className="w-2/3 h-full py-4 md:px-4 flex flex-col justify-center">
+            <div className="text-left md:mt-10">
+              <h2 className="text-xl md:text-2xl text-neutral-200">
+                {modalData.skill}
+              </h2>
+            </div>
+
+            <div className="text-left my-4">
+              <p className="font-normal font-regular text-xs md:text-base text-neutral-500">
+                {modalData.description}
+              </p>
+            </div>
+
+            <div className="py-2">
+              <p className="font-signature text-right text-md md:text-xl text-neutral-400">
+                <span className="text-neutral-500">{modalData.amount}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

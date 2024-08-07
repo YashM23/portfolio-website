@@ -6,7 +6,7 @@ const Education = [
     year: "2024",
     course: "B.E./B.Tech",
     clgname: "St. Francis Institute Of Technology,Borivali(W)",
-    marks: "7.6 CGPA",
+    marks: "7.5 CGPA",
   },
   {
     id: 1,
@@ -34,7 +34,7 @@ const Hobbies = [
 const About = () => {
   return (
     <div className="about h-full w-full bg-black py-10 ">
-      <div className="pt-6">
+      <div className="pt-16">
         <h2 className="text-4xl font-bold text-orange-400 text-center p-4">
           About Me
         </h2>
@@ -62,7 +62,7 @@ const About = () => {
               </tr>
             </thead>
 
-            <tbody className="">
+            <tbody key="tablebody" className="">
               {Education.map(({ id, year, clgname, course, marks }) => (
                 <>
                   <tr

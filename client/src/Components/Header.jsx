@@ -20,13 +20,13 @@ function Header() {
   return (
     <>
       <div className="flex justify-center items-center">
-        <div className="w-[450px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] rounded-full border-[1px] border-neutral-500 px-2 sm:px-6 md:px-10 mt-4 flex items-center justify-between h-20 fixed top-0 bg-black/70 backdrop-blur-sm z-50">
+        <div className="w-[340px] sm:w-[640px] md:w-[768px] lg:w-[900px] xl:w-[1280px] rounded-2xl border-[1px] border-neutral-500 px-2 sm:px-6 md:px-10 mt-2 flex items-center justify-between h-20 fixed top-0 bg-black/70 backdrop-blur-sm z-50">
           <div className="cursor-pointer">
             <Link
               to="home"
               smooth
               duration={1000}
-              className=" text-orange-400 font-navbar font-bold ml-2 md:ml-6 text-3xl md:text-4xl"
+              className=" text-orange-400 font-navbar font-bold ml-2 text-2xl sm:text-3xl md:text-4xl"
             >
               Yash Malavde
             </Link>

@@ -28,7 +28,7 @@ function Home() {
               <br />
 
               <div className="">
-                <p className="text-sm md:text-base font-regular text-left text-neutral-500 text-wrap w-[400px] sm:w-[450px] md:w-[400px]">
+                <p className="text-sm md:text-base font-regular text-left text-neutral-500 text-wrap w-[300px] sm:w-[450px] md:w-[400px]">
                   I'm a{" "}
                   <span className="text-lg bg-clip-text text-transparent duration-300 font-extrabold bg-orange-500 ">
                     Full Stack Web Developer

@@ -6,14 +6,14 @@ import { SiIndeed } from "react-icons/si";
 
 const Contact = () => {
   return (
-    <div className="contact w-full bg-black h-full py-20 flex justify-center">
-      <div className="w-1/2 flex flex-col justify-center items-center">
-        <h2 className="font-bold text-3xl text-orange-500">Contact Me</h2>
-        <p className="text-neutral-400 tracking-wide">( For any more Information )</p>
+    <div className="contact w-full bg-black h-full py-20 flex flex-col sm:flex-row justify-center">
+      <div className="sm:w-1/2 flex flex-col justify-center items-center mb-4 sm:mb-0">
+        <h2 className="font-bold text-xl sm:text-3xl text-orange-500">Contact Me</h2>
+        <p className="text-neutral-400 tracking-wide text-sm sm:text-xl">( For any more Information )</p>
       </div>
 
-      <div className="w-1/2 flex justify-center items-center ">
-        <div className="flex gap-6">
+      <div className="sm:w-1/2 flex justify-center items-center ">
+        <div className="flex gap-4 sm:gap-6">
           <div
             className="flex flex-col items-center "
             onClick={() => {
@@ -26,7 +26,7 @@ const Contact = () => {
               size={50}
               className="text-red-700 hover:bg-red-700 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
             />
-            <h2 className="text-orange-600 font-semibold text-lg mt-2">
+            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               Gmail
             </h2>
           </div>
@@ -41,7 +41,7 @@ const Contact = () => {
               size={50}
               className="text-blue-700 hover:bg-blue-700 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
             />
-            <h2 className="text-orange-600 font-semibold text-lg mt-2">
+            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               LinkedIn
             </h2>
           </div>
@@ -56,7 +56,7 @@ const Contact = () => {
               size={50}
               className="text-purple-800 hover:bg-purple-800 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
             />
-            <h2 className="text-orange-600 font-semibold text-lg mt-2">
+            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               Github
             </h2>
           </div>
@@ -71,7 +71,7 @@ const Contact = () => {
               size={50}
               className="text-blue-600 hover:bg-blue-600 hover:text-white hover:scale-110 duration-200  bg-white rounded-md p-2"
             />
-            <h2 className="text-orange-600 font-semibold text-lg mt-2">
+            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               Indeed
             </h2>
           </div>

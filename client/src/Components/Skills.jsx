@@ -218,7 +218,7 @@ const Skills = () => {
                       onClick={() => {
                         showModal(id);
                       }}
-                      className={`border-2 border-neutral-600 hover:bg-orange-600/15 duration-500 flex items-center cursor-pointer p-3 rounded-xl`}
+                      className={`border-2 border-neutral-700 hover:bg-white/25 hover:scale-95 duration-500 flex items-center cursor-pointer p-3 rounded-xl `}
                     >
                       <div className=" flex justify-center items-center">
                         {/* <IoLogoHtml5 className="text-5xl text-center" /> */}

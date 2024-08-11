@@ -15,10 +15,12 @@ const Contact = () => {
           ( For any more Information )
         </p>
       </div>
-      <div className="sm:w-1/2 flex justify-center items-center ">
-        <div className="flex gap-4 sm:gap-6">
+
+
+      <div className="sm:w-1/2 flex justify-center items-center sm:bg-orange-600/60 sm:p-10 sm:rounded-l-full">
+        <div className="flex gap-6 sm:gap-8">
           <div
-            className="flex flex-col items-center "
+            className="flex flex-col items-center"
             onClick={() => {
               window.open(
                 "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=yash.malavde.jobs@gmail.com"
@@ -27,24 +29,24 @@ const Contact = () => {
           >
             <BiLogoGmail
               size={50}
-              className="text-red-700 hover:bg-red-700 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
+              className="text-red-700 bg-white hover:bg-white/80 duration-200  rounded-md p-2"
             />
-            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
+            <h2 className="text-white font-poppins sm:text-base tracking-tight mt-1">
               Gmail
             </h2>
           </div>
           <div
-            className="flex flex-col items-center "
+            className="flex flex-col items-center"
             onClick={() => {
               window.open("https://linkedin.com/in/yash-malavde-6b7137219");
             }}
           >
             <FaLinkedin
               size={50}
-              className="text-blue-700 hover:bg-blue-700 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
+              className="text-white hover:bg-white hover:text-blue-600 duration-200 bg-blue-600 rounded-md p-2"
             />
 
-            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
+            <h2 className="text-white font-poppins sm:text-base tracking-tight mt-1">
               LinkedIn
             </h2>
           </div>
@@ -56,13 +58,13 @@ const Contact = () => {
           >
             <FaGithub
               size={50}
-              className="text-purple-800 hover:bg-purple-800 hover:text-white hover:scale-110 duration-200 bg-white rounded-md p-2"
+              className="text-white hover:bg-white hover:text-purple-800 duration-200 bg-purple-800 rounded-md p-2"
             />
-            <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
+            <h2 className="text-white font-poppins sm:text-base tracking-tight mt-1">
               Github
             </h2>
           </div>
-          <div
+          {/* <div
             className="flex flex-col items-center "
             onClick={() => {
               window.open("");
@@ -75,7 +77,7 @@ const Contact = () => {
             <h2 className="text-neutral-500 font-semibold sm:text-lg mt-2">
               Indeed
             </h2>
-          </div>
+          </div> */}
         </div>
       </div>
 

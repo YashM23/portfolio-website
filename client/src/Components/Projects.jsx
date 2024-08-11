@@ -105,12 +105,12 @@ const Projects = () => {
                   Technologies Used :
                 </p>
 
-                <div className="mb-2 flex items-center justify-start p-4 gap-2 w-[260px] sm:w-[320px] overflow-x-auto no-scrollbar">
+                <div className="mb-2 flex items-center justify-start p-4 gap-2 w-[260px] sm:w-[320px] md:w-[410px] overflow-x-auto no-scrollbar">
                   {project.techstack.map((tech, index) => (
                     <>
                       <p
                         key={index}
-                        className="p-2 cursor-pointer border-2 border-neutral-600 hover:bg-orange-500/70 hover:text-white duration-300  rounded-lg text-neutral-400 text-xs sm:text-xs md:text-xs lg:text-sm text-center"
+                        className="p-2 cursor-pointer border-2 border-neutral-600 hover:bg-orange-500/40 hover:text-white hover:scale-95 duration-300  rounded-lg text-neutral-400 text-xs sm:text-xs md:text-xs lg:text-sm text-center"
                       >
                         {tech}
                       </p>

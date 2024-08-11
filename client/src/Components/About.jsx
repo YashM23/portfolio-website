@@ -98,7 +98,7 @@ const About = () => {
 
         <div className="w-[350px] sm:w-[600px] md:w-[800px] flex justify-start items-center gap-2 p-2 overflow-scroll no-scrollbar">
           {Hobbies.map(({ id, name }) => (
-            <div className="border-2 border-neutral-600 rounded-full hover:bg-orange-600/60 duration-500 text-center">
+            <div className="border-2 border-neutral-600 rounded-full hover:bg-orange-600/60 hover:scale-90 duration-300 text-center">
               <p className="text-white p-4 text-nowrap text-xs sm:text-base" key={id}>
                 {name}
               </p>

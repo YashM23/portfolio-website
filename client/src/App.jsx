@@ -1,7 +1,7 @@
 // import Footer from "./Components/Footer";
 // import { Route, BrowserRouter, Routes } from "react-router-dom";
 import About from "./Components/About.jsx";
-// import Contact from "./Components/Contact.jsx";
+import Contact from "./Components/Contact.jsx";
 import Header from "./Components/Header.jsx";
 import Home from "./Components/Home.jsx";
 import Projects from "./Components/Projects.jsx";

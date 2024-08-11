@@ -43,7 +43,7 @@ function Home() {
                 Projects <FaArrowRight className=" group-hover:rotate-90 duration-500 " />
               </button> */}
 
-              <button className="w-60 md:w-full bg-gradient-to-l from-orange-500 to-orange-700 hover:bg-white text-white  group gap-4 font-semibold flex items-center justify-center p-4 rounded-lg cursor-pointer duration-100">
+              <button className="w-60 md:w-full bg-gradient-to-l from-orange-500 to-orange-700 hover:bg-white text-white  group gap-4 font-semibold flex items-center justify-center p-4 rounded-lg cursor-pointer ">
                 <a
                   href={YashResume}
                   download={true}

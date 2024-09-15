@@ -2,7 +2,7 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import yashbg from "../images/yash-bg-orange.png";
 // import { FaArrowRight } from "react-icons/fa";
-import YashResume from "../files/Yash_Resume_2.pdf";
+import YashResume from "../files/ATS_Resume_Yash.pdf";
 // import { BsDownload } from "react-icons/bs";
 // import { GrDocumentDownload } from "react-icons/gr";
 import { FaRegFilePdf } from "react-icons/fa6";
@@ -28,7 +28,7 @@ function Home() {
               <br />
 
               <div className="">
-                <p className="text-sm md:text-base font-regular text-left text-neutral-500 text-wrap w-[300px] sm:w-[450px] md:w-[350px]  line-clamp-3 hover:line-clamp-none transition-transform duration-200">
+                <p className="text-sm md:text-base font-regular text-neutral-500 text-justify w-[60vw] sm:w-[40vw]">
                   I'm a{" "}
                   <span className="text-lg bg-clip-text text-transparent duration-300 font-extrabold bg-orange-500 ">
                     Full Stack Web Developer
@@ -63,7 +63,7 @@ function Home() {
           </div>
 
           <div className="h-full w-1/2  hidden md:flex justify-center items-center">
-            <div className="h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] rounded-2xl bg-[#c2410c] overflow-hidden">
+            <div className="h-[300px] w-[300px] lg:h-[400px] lg:w-[400px] rounded-2xl  overflow-hidden hover:rounded-full duration-1000 transform ease-in-out">
               <img
                 src={yashbg}
                 width={100}

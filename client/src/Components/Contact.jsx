@@ -12,7 +12,7 @@ const Contact = () => {
           Contact Me
         </h2>
         <p className="text-neutral-400 tracking-wide text-sm sm:text-xl">
-          ( For any more Information )
+          ( For More Information )
         </p>
       </div>
 

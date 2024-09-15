@@ -72,7 +72,7 @@ function Header() {
               <div className={`fixed top-0 right-0 w-[140px] h-full py-20 `}>
                 <ul className="flex flex-col justify-center items-end bg-black/90 rounded-2xl border-[1px] border-neutral-500 backdrop-blur-sm z-50">
                   {navlinks.map(({ id, link, title },index) => (
-                    <Link
+                    <button
                       onClick={() => {
                         setNavbar(!navbar);
                       }}
@@ -83,7 +83,7 @@ function Header() {
                       className="font-bold font-regular capitalize text-xl py-2 mr-6 text-gray-500 hover:text-orange-500 hover:scale-105 duration-300 cursor-pointer"
                     >
                       {title}
-                    </Link>
+                    </button>
                   ))}
                 </ul>
               </div>

@@ -22,7 +22,7 @@ const skills_Icon = [
     skill: "HTML",
     description:
       "HTML stands for Hyper Text Markup Language. HTML is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements. HTML elements tell the browser how to display the content.",
-    amount: 80,
+    amount: 90,
     icon: (
       <IoLogoHtml5 className="text-4xl md:text-5xl text-orange-600 text-center" />
     ),
@@ -49,7 +49,7 @@ const skills_Icon = [
     description:
       "JavaScript is a scripting or programming language that allows you to implement complex features on web pages",
 
-    amount: 60,
+    amount: 75,
     icon: (
       <RiJavascriptFill className="text-4xl md:text-5xl text-yellow-400 text-center" />
     ),
@@ -63,7 +63,7 @@ const skills_Icon = [
     description:
       "React is a framework that employs Webpack to automatically compile React, JSX, and ES6 code while handling CSS file prefixes. React is a JavaScript-based UI development library.",
 
-    amount: 60,
+    amount: 70,
     icon: (
       <RiReactjsFill className="text-4xl md:text-5xl text-blue-400 text-center" />
     ),
@@ -91,7 +91,7 @@ const skills_Icon = [
     description:
       "Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser.",
 
-    amount: 60,
+    amount: 75,
     icon: (
       <RiNodejsFill className="text-4xl md:text-5xl text-green-600 text-center" />
     ),
@@ -105,7 +105,7 @@ const skills_Icon = [
     description:
       " Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application.",
 
-    amount: 60,
+    amount: 65,
     icon: <SiExpress className="text-4xl md:text-5xl text-white text-center" />,
     logocolor: "text-white",
     amountcolor: "bg-white",
@@ -146,7 +146,7 @@ const skills_Icon = [
     description:
       "Python is commonly used for developing websites and software, task automation, data analysis, and data visualisation.",
 
-    amount: 70,
+    amount: 80,
     icon: (
       <FaPython className="text-4xl md:text-5xl text-yellow-500 text-center" />
     ),
@@ -154,33 +154,33 @@ const skills_Icon = [
     amountcolor: "bg-yellow-500",
     hexcode: "#eab308",
   },
-  {
-    id: 10,
-    skill: "Redis",
-    description:
-      "Redis is an open source in-memory data store that can be used as a database, cache, or message broker. It's often used for caching web pages and reducing the load on servers.",
+  // {
+  //   id: 10,
+  //   skill: "Redis",
+  //   description:
+  //     "Redis is an open source in-memory data store that can be used as a database, cache, or message broker. It's often used for caching web pages and reducing the load on servers.",
 
-    amount: 40,
-    icon: <DiRedis className="text-4xl md:text-5xl text-red-700 text-center" />,
-    logocolor: "text-white",
-    amountcolor: "bg-red-700",
-    hexcode: "#b91c1c",
-  },
+  //   amount: 40,
+  //   icon: <DiRedis className="text-4xl md:text-5xl text-red-700 text-center" />,
+  //   logocolor: "text-white",
+  //   amountcolor: "bg-red-700",
+  //   hexcode: "#b91c1c",
+  // },
 
-  {
-    id: 11,
-    skill: "Socket IO",
-    description:
-      "Socket.IO was created in 2010. It was developed to use open connections to facilitate realtime communication, still a relatively new phenomenon at the time.",
+  // {
+  //   id: 11,
+  //   skill: "Socket IO",
+  //   description:
+  //     "Socket.IO was created in 2010. It was developed to use open connections to facilitate realtime communication, still a relatively new phenomenon at the time.",
 
-    amount: 50,
-    icon: (
-      <TbBrandSocketIo className="text-4xl md:text-5xl text-white text-center" />
-    ),
-    logocolor: "text-white",
-    amountcolor: "bg-white",
-    hexcode: "#ffffff",
-  },
+  //   amount: 50,
+  //   icon: (
+  //     <TbBrandSocketIo className="text-4xl md:text-5xl text-white text-center" />
+  //   ),
+  //   logocolor: "text-white",
+  //   amountcolor: "bg-white",
+  //   hexcode: "#ffffff",
+  // },
 ];
 
 const Skills = () => {
@@ -209,7 +209,7 @@ const Skills = () => {
           <div className="h-full max-w-full">
             {/* <h2 className="font-regular text-2xl md:text-3xl text-neutral-400">Front-End</h2> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-4 gap-y-6 gap-x-4 mt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-4 gap-y-6 gap-x-4 mt-2">
               {skills_Icon.map(
                 ({ id, skill, amount, icon, logocolor, amountcolor, desc }) => (
                   <>
@@ -226,7 +226,7 @@ const Skills = () => {
                       </div>
 
                       <div className="w-28 md:w-36 border-l-2 border-neutral-500 ml-4">
-                        <p className="text-right font-regular font-bold text-sm md:text-xl text-neutral-400">
+                        <p className="text-right font-regular font-bold text-base md:text-xl text-neutral-400">
                           {skill} <br />{" "}
                           <span
                             className={` font-signature text-transparent bg-clip-text font-bold ${amountcolor}`}
@@ -262,8 +262,8 @@ const SkillsModal = ({ modalData, modal, setModal }) => {
   // console.log(data);
   return (
     <>
-      <div className="fixed inset-0 bg-white/5 backdrop-blur-sm flex justify-center items-center z-50">
-        <div className="relative bg-black max-w-xs sm:max-w-2xl flex justify-center items-center rounded-2xl">
+      <div className="fixed inset-0 bg-neutral-900/35 backdrop-blur-sm flex justify-center items-center z-50">
+        <div className="relative bg-black w-[85vw] sm:max-w-3xl flex justify-center items-center rounded-2xl overflow-hidden">
           <div
             onClick={() => {
               setModal(!modal);
@@ -272,38 +272,40 @@ const SkillsModal = ({ modalData, modal, setModal }) => {
           >
             <IoIosRemoveCircleOutline />
           </div>
-          <div className="w-1/3 flex justify-center items-center ">
-            <div className="flex justify-center items-center p-4 ">
+          {/* LOGO SECTION */}
+          <div className="w-1/3 flex justify-center items-center h-full">
+            <div className="flex justify-center items-center h-full">
               <p className="">{modalData.icon}</p>
             </div>
           </div>
-
-          <div className="w-2/3 h-full py-4 md:px-4 flex flex-col justify-center">
-            <div className="text-left md:mt-10">
+          
+          {/* CONTENT SECTION */}
+          <div className="w-2/3 h-full py-4 md:px-5 pl-4 flex flex-col justify-center bg-white/5 ">
+            <div className="text-left mt-6 md:mt-10">
               <h2 className="text-xl md:text-2xl text-neutral-200">
                 {modalData.skill}
               </h2>
             </div>
 
             <div className="text-left my-4">
-              <p className="font-normal font-regular text-xs md:text-base text-neutral-500">
+              <p className="font-normal font-regular text-xs md:text-sm text-neutral-500">
                 {modalData.description}
               </p>
             </div>
 
-            <div className="py-2">
+            <div className="py-2 mr-6">
               <p className="font-signature text-right text-md md:text-xl">
                 <span className={`text-neutral-500 ${modalData.logocolor}`}>
                   {modalData.amount}%
-                  <Line
-                    strokeWidth={2}
-                    trailWidth={2}
-                    strokeColor={modalData.hexcode}
-                    trailColor="#000000"
-                    percent={modalData.amount}
-                    className={` ${modalData.logocolor}`}
-                  />
                 </span>
+                <Line
+                  strokeWidth={2}
+                  trailWidth={2}
+                  strokeColor={modalData.hexcode}
+                  trailColor="#000000"
+                  percent={modalData.amount}
+                  className={` ${modalData.logocolor}`}
+                />
               </p>
             </div>
           </div>
